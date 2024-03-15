@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('_bootstrap_meta')%>
+
+		<title>Sign In</title>
+	</head>
+	<body style="background-image: url('https://wallpapers.com/images/hd/4k-sharp-colorful-clouds-364l86a13wi6hkqg.jpg');">
+		<%- include('_header')%>
+		<div
+			class="w-50 mx-auto mt-5"
+			style="
+				height: 60vh;
+				display: grid;
+				place-content: center;
+				width: 530px;
+				border:0;
+				background: rgba(255, 255, 255,0.5);
+				border-radius: 5px;
+				box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+			"
+		>
+			<div class="mx-auto mt-3 mb-3" style="width: 100px">
+				<h4>Sign In</h4>
+			</div>
+
+			<form action="/users/create-session" method="POST" style="width: 300px">
+				<!-- Username input -->
+				<div class="form-outline mb-4">
+					<label class="form-label" for="username">Enter Username</label>
+					<input type="username" class="form-control" id="username" placeholder="Jhon-Doe" name="username" required />
+				</div>
+
+				<!-- Password input -->
+				<div class="form-outline mb-4">
+					<label class="form-label" for="password">Enter Password</label>
+					<input type="password" id="password" class="form-control" placeholder="Jhon-Doe" name="password" required />
+				</div>
+
+				<!-- Submit button -->
+				<button type="submit" class="btn btn-success btn-block mb-4">Sign in</button>
+
+				<!-- Register buttons -->
+				<div class="text-center">
+					<p>Not Registered? <a href="/users/signup">Register</a></p>
+				</div>
+			</form>
+		</div>
+		<%- include('_bootstrap_script')%>
+	</body>
+</html>

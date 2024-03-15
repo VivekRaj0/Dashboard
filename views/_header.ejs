@@ -1,0 +1,14 @@
+<header>
+	<% if (locals.user) { %>
+	<nav class="navbar navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/">Dashboard</a>
+			<a class="navbar-brand" href="/">Welcome! </a>
+			<form class="d-flex px-4">
+				<a class="navbar-brand p-2" >Databases</a>
+				<a class="navbar-brand p-2" href="/users/signout" style="background-color: red; border-radius: 5px">Sign out</a>
+			</form>
+		</div>
+	</nav>
+	<% } %>
+</header>
